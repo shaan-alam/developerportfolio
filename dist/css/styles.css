@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 1.6;
 }
 
-#home, #aboutme {
+#home, #aboutme, #projects {
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -43,7 +43,6 @@ main {
 
 canvas {
   position: absolute;
-  z-index: 1;
   top: 0;
   bottom: 0;
   left: 0;
@@ -54,8 +53,8 @@ canvas {
 
 @-webkit-keyframes drop {
   0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -65,8 +64,8 @@ canvas {
 
 @keyframes drop {
   0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -106,7 +105,7 @@ nav {
   width: 100%;
   background: transparent;
   color: #fff;
-  z-index: 100;
+  z-index: 10000;
 }
 
 @media screen and (max-width: 768px) {
@@ -175,8 +174,8 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-clip-path: circle(0px at 190% -10%);
-            clip-path: circle(0px at 190% -10%);
+    -webkit-clip-path: circle(0px at 100% -10%);
+            clip-path: circle(0px at 100% -10%);
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
     z-index: 10000;
@@ -188,8 +187,8 @@ nav {
     position: absolute;
     top: 50%;
     right: 5%;
-    -webkit-transform: translate(-5%, -50%);
-            transform: translate(-5%, -50%);
+    -webkit-transform: translate(-5%, -20%);
+            transform: translate(-5%, -20%);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     z-index: 10000;
@@ -206,8 +205,8 @@ nav {
 
 @media screen and (max-width: 768px) {
   .nav-links.open {
-    -webkit-clip-path: circle(1000px at -100% 20%);
-            clip-path: circle(1000px at -100% 20%);
+    -webkit-clip-path: circle(1000px at 0% 20%);
+            clip-path: circle(1000px at 0% 20%);
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -335,10 +334,10 @@ nav {
 
 .cta {
   margin-top: 40px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-animation: drop 1s infinite ease-in-out;
-          animation: drop 1s infinite ease-in-out;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-animation: drop 1s infinite ease-out;
+          animation: drop 1s infinite ease-out;
   cursor: pointer;
 }
 
@@ -478,5 +477,129 @@ nav {
 .cta-git-div {
   width: 100%;
   margin: 30px 0;
+}
+
+#projects {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  height: auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #272626;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  margin: 100px 0;
+  padding: 10px 40px;
+  position: relative;
+  background-color: transparent;
+  width: 50%;
+}
+
+.container:nth-child(1) {
+  margin-top: 40px;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #272626;
+  border: 4px solid #272626;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #272626;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #272626;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #272626;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #272626 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: transparent;
+  position: relative;
+  border-radius: 6px;
+}
+
+.content a {
+  color: #272626;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.content a:hover {
+  color: #3550f5;
+}
+
+.content h4 {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #46464f;
 }
 /*# sourceMappingURL=styles.css.map */

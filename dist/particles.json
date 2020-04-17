@@ -8,17 +8,23 @@
       }
     },
     "color": {
-      "value": "#3550f5"
+      "value": ["#272626", "#3550f5", "#ff0000"]
     },
     "opacity": {
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 10
+        "speed": 4
       }
     },
     "size": {
-      "value": 5,
+      "value": 4,
+      "anim": {
+        "enable": true,
+        "speed": 5,
+        "size_min": 0.4,
+        "sync": false
+      },
       "random": true      
     },
     "line_linked": {
