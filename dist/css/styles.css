@@ -73,7 +73,7 @@ canvas {
   }
 }
 
-.cta-github {
+.cta-github, .cta-github-outline {
   padding: 18px 30px;
   border: none;
   background: #161619;
@@ -86,15 +86,26 @@ canvas {
 }
 
 @media screen and (max-width: 320px) {
-  .cta-github {
+  .cta-github, .cta-github-outline {
     padding: 15px 25px;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .cta-github {
+  .cta-github, .cta-github-outline {
     padding: 15px 30px;
   }
+}
+
+.cta-github-outline {
+  color: #161619;
+  border: 2px solid #161619;
+  background: transparent;
+}
+
+.cta-github-outline:hover {
+  background: #161619;
+  color: #fff;
 }
 
 nav {
@@ -476,7 +487,8 @@ nav {
 
 .cta-git-div {
   width: 100%;
-  margin: 30px 0;
+  margin: 30px auto;
+  text-align: center;
 }
 
 #projects {
@@ -487,6 +499,11 @@ nav {
       -ms-flex-pack: stretch;
           justify-content: stretch;
   height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 }
 
 /* The actual timeline (the vertical ruler) */
