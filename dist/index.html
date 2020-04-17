@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+</head>
+
+<body>
+  <nav>
+    <ul class="nav-links">
+      <li class="fadeInUp"><a href="#home">Home</a></li>
+      <li class="fadeInUp"><a href="#aboutme">About Me</a></li>
+      <li class="fadeInUp"><a href="#projects">Projects</a></li>
+      <li class="fadeInUp"><a href="">Contact Me</a></li>
+    </ul>
+
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+  <main id="particles-js">
+  <section id="home">
+    <img src="./img/logo.jpeg" class="logo wow bounceInUp" alt="">
+    <h3 class="wow bounceInDown">Hi, My name is </h3>
+    <h1 class="wow bounceInDown">Shaan Alam</h1>
+    <h3 class="wow bounceInDown">I am a Web developer, Designer, & Self Taught Programmer</h3>
+    <div class="cta">
+      <a href="#aboutme">
+        <img src="../dist/img/arrow-right.svg" class="cta-svg">
+      </a>
+    </div>
+  </section>
+
+  <section id="aboutme">
+    <div class="skills">
+      <h1 class="wow bounceInDown">About Me</h1>
+      <p class="wow fadeInUp">Hello viewers, I am Shaan Alam. I am a self taught Web Developer, Designer & Programmer. I have been learning Web Development for quite few years. I have the required skills to make interactive, professional websites. Though I am currently in the process of learning Web Development, I have deep knowledge in HTML, CSS, JavaScript, Sass, Bootstrap, & JavaScript libraries like React and many more. I am looking forward to learn backend development in JavaScript with Node & Express. I hope that you like my Portfolio site! 😄😄</p>
+      <div class="cta-git-div wow fadeInUp">
+        <a href="" class="cta-github">View my Github here!</a>
+      </div>
+    </div>
+    <div class="skills-box">
+      <div class="wow bounceInUp">
+        <img src="./img/code/html.png" alt="">
+      </div>
+      <div class="wow bounceInUp">
+        <img src="./img/code/css.png" alt="">
+      </div>
+      <div class="wow bounceInUp">
+        <img src="./img/code/js.png" alt="">
+      </div>
+      <div class="wow bounceInUp">
+        <img src="./img/code/python.png" alt="">
+      </div>
+      <div class="wow bounceInUp">
+        <img src="./img/code/react.png" alt="">
+      </div>
+    </div>
+  </section>
+</main>
+
+  <section id="projects">
+
+  </section>
+
+  <img src="./img/big-eclipse.svg" class="big-circle">
+  <img src="./img/mid-eclipse.svg" class="mid-circle">
+
+  <script src="js/main.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+
+    particlesJS.load('particles-js', 'particles.json', () => console.log('Particles are loaded'));
+  </script>
+</body>
+
+</html>
