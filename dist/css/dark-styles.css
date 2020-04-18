@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.6;
+}
+
+.dark-body {
+  background: #161619;
+  color: #fff;
+}
+
+.dark-body nav a {
+  color: #fff;
+}
+
+.dark-body nav a::before {
+  background: #fff;
+}
+
+.dark-body #home h1 {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+.dark-body #aboutme {
+  background: url("../img/waves-dark.png") center center;
+}
+
+.dark-body #aboutme .skills h1 {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+.dark-body #aboutme p {
+  color: #fff;
+}
+
+.dark-body #projects {
+  background: #161619;
+}
+
+.dark-body #projects .timeline::after {
+  background: #fff;
+}
+
+.dark-body #projects .container::after {
+  background: #fff;
+  border-color: #fff;
+}
+
+.dark-body #projects .content {
+  color: #161619;
+  background: #fff;
+}
+
+.dark-body .cta-github-outline {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.dark-body .cta-github-outline:hover {
+  background: #fff;
+  color: #272626;
+}
+
+.dark-body .nav-links.open {
+  background: #fff;
+}
+
+.dark-body .nav-links.open a {
+  color: #272626;
+}
+/*# sourceMappingURL=dark-styles.css.map */
